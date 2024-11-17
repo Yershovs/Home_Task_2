@@ -1,0 +1,15 @@
+CXX = g++
+CXXFLAGS = -Wall
+TARGET = a
+OBJ = Lin_eq.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJ)
+	$(CXX) $(OBJ) -o $(TARGET)
+
+Lin_eq.o: Lin_eq.cpp
+	$(CXX) $(CXXFLAGS) -c Lin_eq.cpp
+
+clean:
+	rm -f $(OBJ) $(TARGET)
